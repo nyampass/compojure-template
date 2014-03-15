@@ -7,13 +7,13 @@
     "project_lein2.clj"
     "project_lein1.clj"))
 
-(defn compojure
+(defn reloadable-compojure
   "Create a new Compojure project"
   [name]
   (let [data {:name name
               :sanitized (sanitize name)
               :year (year)}
-        render #((renderer "compojure") % data)]
+        render #((renderer "reloadable_compojure") % data)]
     (->files data
              [".gitignore"  (render "gitignore")]
              ["project.clj" (render project-file)]
