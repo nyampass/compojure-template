@@ -18,6 +18,7 @@
              [".gitignore"  (render "gitignore")]
              ["project.clj" (render project-file)]
              ["README.md"   (render "README.md")]
+             ["src/{{sanitized}}/core.clj"       (render "core.clj")]
              ["src/{{sanitized}}/handler.clj"       (render "handler.clj")]
              ["test/{{sanitized}}/test/handler.clj" (render "handler_test.clj")]
              "resources/public")))
